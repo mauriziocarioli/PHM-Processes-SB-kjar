@@ -55,10 +55,10 @@
       </bpmn2:extensionElements>
       <bpmn2:incoming>_3429E29B-838A-423F-B509-14DFF760F3B2</bpmn2:incoming>
     </bpmn2:endEvent>
-    <bpmn2:subProcess id="_17C00A9A-7C2C-45C3-A863-C3ADE1A54DFF" name="For Each Task in the Trigger">
+    <bpmn2:subProcess id="_17C00A9A-7C2C-45C3-A863-C3ADE1A54DFF" name="For Each Action in the Trigger">
       <bpmn2:extensionElements>
         <drools:metaData name="elementname">
-          <drools:metaValue><![CDATA[For Each Task in the Trigger]]></drools:metaValue>
+          <drools:metaValue><![CDATA[For Each Action in the Trigger]]></drools:metaValue>
         </drools:metaData>
       </bpmn2:extensionElements>
       <bpmn2:incoming>_C46D0C53-BD71-4B4D-813F-A3F8D9D442B1</bpmn2:incoming>
@@ -148,10 +148,10 @@
           </drools:metaData>
         </bpmn2:extensionElements>
       </bpmn2:sequenceFlow>
-      <bpmn2:callActivity id="_08EB064E-B2BC-4C87-86FE-A54FE1683C71" drools:independent="false" drools:waitForCompletion="true" name="Do the Task" calledElement="PHM-Processes.Task">
+      <bpmn2:callActivity id="_08EB064E-B2BC-4C87-86FE-A54FE1683C71" drools:independent="false" drools:waitForCompletion="true" name="Do the Action" calledElement="PHM-Processes.Action">
         <bpmn2:extensionElements>
           <drools:metaData name="elementname">
-            <drools:metaValue><![CDATA[Do the Task]]></drools:metaValue>
+            <drools:metaValue><![CDATA[Do the Action]]></drools:metaValue>
           </drools:metaData>
         </bpmn2:extensionElements>
         <bpmn2:incoming>_156D41FE-4CA0-47F7-B879-D97A29FDC151</bpmn2:incoming>
@@ -172,10 +172,10 @@
         <bpmn2:incoming>_8406741B-91AF-46F0-8C89-C054244ACC83</bpmn2:incoming>
         <bpmn2:outgoing>_156D41FE-4CA0-47F7-B879-D97A29FDC151</bpmn2:outgoing>
       </bpmn2:exclusiveGateway>
-      <bpmn2:intermediateCatchEvent id="_6E9DC35F-638D-468C-AD19-DDB19211B0A1" name="Predecessor Task Has Closed">
+      <bpmn2:intermediateCatchEvent id="_6E9DC35F-638D-468C-AD19-DDB19211B0A1" name="Predecessor Action Has Closed">
         <bpmn2:extensionElements>
           <drools:metaData name="elementname">
-            <drools:metaValue><![CDATA[Predecessor Task Has Closed]]></drools:metaValue>
+            <drools:metaValue><![CDATA[Predecessor Action Has Closed]]></drools:metaValue>
           </drools:metaData>
         </bpmn2:extensionElements>
         <bpmn2:incoming>_5C96E363-8B42-46F3-B5CB-B958F68BF193</bpmn2:incoming>
@@ -197,10 +197,10 @@
 kcontext.setVariable("_taskId",d.getTask().getId());
 kcontext.setVariable("_predecessorId",d.getTask().getPredecessor());]]></bpmn2:script>
       </bpmn2:scriptTask>
-      <bpmn2:endEvent id="_D3898BE3-B510-47DA-836B-19F9DA8F7FA5" name="Close the Task">
+      <bpmn2:endEvent id="_D3898BE3-B510-47DA-836B-19F9DA8F7FA5" name="Close the Action">
         <bpmn2:extensionElements>
           <drools:metaData name="elementname">
-            <drools:metaValue><![CDATA[Close the Task]]></drools:metaValue>
+            <drools:metaValue><![CDATA[Close the Action]]></drools:metaValue>
           </drools:metaData>
           <drools:metaData name="customScope">
             <drools:metaValue><![CDATA[project]]></drools:metaValue>
@@ -209,13 +209,13 @@ kcontext.setVariable("_predecessorId",d.getTask().getPredecessor());]]></bpmn2:s
         <bpmn2:incoming>_7D714733-AE58-49A0-9904-8484C9DF65AE</bpmn2:incoming>
         <bpmn2:signalEventDefinition id="_WQ_RTXHwEeqOn9bsb0wI2A" signalRef="_3964eba3-b296-372f-b63e-3ebc37cda566"/>
       </bpmn2:endEvent>
-      <bpmn2:textAnnotation id="_257B8694-C110-47CF-B5DB-15D543154C57" name="Wait for predecessor task to close.">
+      <bpmn2:textAnnotation id="_257B8694-C110-47CF-B5DB-15D543154C57" name="Wait for predecessor Action to close.">
         <bpmn2:extensionElements>
           <drools:metaData name="elementname">
-            <drools:metaValue><![CDATA[Wait for predecessor task to close.]]></drools:metaValue>
+            <drools:metaValue><![CDATA[Wait for predecessor Action to close.]]></drools:metaValue>
           </drools:metaData>
         </bpmn2:extensionElements>
-        <bpmn2:text>Wait for predecessor task to close.</bpmn2:text>
+        <bpmn2:text>Wait for predecessor Action to close.</bpmn2:text>
       </bpmn2:textAnnotation>
       <bpmn2:exclusiveGateway id="_7B20708A-6961-4EF6-A0B5-90097AAFBEA3" name="Predecessor?" gatewayDirection="Diverging">
         <bpmn2:extensionElements>
